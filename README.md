@@ -31,3 +31,36 @@ Note: For some books all of the data won't be available.
 * Write unit tests (use test suite libraries like `mocha` or `jest`) for the code and use code coverage analysis tool (built-in `jest` one, or libraries like `Istanbul`).
 
 * Process all metadata for the titles for later querying
+
+
+================================================================================
+
+Comments :
+
+Pre-requisite:
+
+My-Sql db ver 8.0
+npm install node
+npm install mysql
+npm install xml2js
+npm install mocha
+npm install fs
+npm install chai
+npm istall sequelize
+
+1. run.js - Simple entry point to the application which takes the RDF file name as the parameter . 
+Execution : node run.js pg1.rdf
+
+2. dbSetup.js - This scripts setups the database and the required tables for this application.
+Execution : node dbSetup.js
+
+3. db.js - Establishes db connection
+
+4. models.js - Database models using sequelize. The same can be used for setting up the database too
+Execution : node models.js
+
+5. rdffileParser.js - Script that parses the RDF files and inserts into the tables
+Execution : This will be invokded from run.js
+
+6. testSample.js - Sample test scripts implemented using mocha
+execution : mocha testSample.js
